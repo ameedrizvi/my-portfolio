@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container"> 
+           <nav>
+            <!-- <img src="images/logo.png" class="logo"> -->
+               <div class="logo">
+                  <span class="letter">A</span>
+                  <span class="letter">m</span>
+                  <span class="letter">e</span>
+                  <span class="letter">e</span>
+                  <span class="letter">d</span>
+               </div>
+               <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Contact</a></li>
+               </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Ameed Rizvi</span><br>From India</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="paragraph-space">
+                        With a heart adorned with empathy and a soul ignited by passion, 
+                        I wander through the landscapes of human connection, 
+                        weaving webs of compassion and understanding with every encounter. 
+                        For in the tapestry of life, it is the threads of kindness that bind us all together.
+                        
+                    </p>
+                    <p>
+                        Join me, dear wanderer, as we embark upon this odyssey of introspection 
+                        and exploration, discovering the untold stories that lie within and without.
+                        For in the endless expanse of existence, there is always more to uncover, 
+                        more to experience, and more to cherish.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Proficiency in languages such as Python,Java,C/C++,JavaScript,and others</li>
+                            <li><span>Web Development</span><br>Learn HTML,CSS,and JavaScript for front-end development.<br>
+                            Also,explore back-end technologies like Node.js,Express.js,Django,orFlask.</li>
+                            <li><span>Data Structures and Algorithms</span><br>Master fundamental data structures.
+                                <br>Solve problems on platform like LeetCode or Codingninjas.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <div class="column">
+                            <ul>
+                                <li><span>Bachelor of Science in Computer Science Engineering</span></li>
+                                <li>National Institute of Technology, Manipur</li>
+                                <li>Expected Graduation: May, 2025</li>
+                                <li>CGPA:</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <ul>
+                                <li><span>Intermediate</span></li>
+                                <li>Oriental Public School, Kishanganj</li>
+                                <li>Completed: May, 20</li>
+                                <li>CGPA:</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <ul>
+                                <li><span>Primary Education</span></li>
+                                <li>Oriental Public School, Kishanganj</li>
+                                <li>Completed: May,20</li>
+                                <li>CGPA:</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>N/A</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+</body>
+</html>
